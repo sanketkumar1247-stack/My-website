@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media &amp; Opinion — Sanket Kumar Prajapati</title>
+  <meta name="description" content="Opinion and media writing by Sanket Kumar Prajapati in Hindustan Times, Jansatta, and South Asia Monitor." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" data-od-id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" data-od-id="logo">Sanket K. Prajapati</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-od-id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" data-od-id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="media.html" aria-current="page">Media</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" data-od-id="media-main">
+    <p class="kicker kicker-accent" data-od-id="media-kicker">Commentary</p>
+    <h1 class="page-title" data-od-id="media-page-title">Media &amp; opinion</h1>
+    <p class="page-lead" data-od-id="media-lead">
+      Op-eds and analysis on India–Europe relations, trade, technology partnership, and strategic affairs — published in national and regional outlets.
+    </p>
+
+    <div class="media-grid" data-od-id="media-grid-full">
+      <a class="media-card" href="https://www.hindustantimes.com/ht-insight/international-affairs/from-nice-a-partnership-built-on-trust-101782469922329.html" target="_blank" rel="noopener noreferrer" data-od-id="media-card-nice">
+        <span class="outlet">Hindustan Times · HT Insight · International Affairs</span>
+        <h3>From Nice: A partnership built on trust</h3>
+        <p>On the India–Europe partnership and why trust remains the organising principle after the Nice moment.</p>
+        <span class="read-link">Read on Hindustan Times →</span>
+      </a>
+
+      <a class="media-card" href="https://www.hindustantimes.com/ht-insight/international-affairs/euindia-trade-deal-the-path-ahead-101781585048074.html" target="_blank" rel="noopener noreferrer" data-od-id="media-card-trade">
+        <span class="outlet">Hindustan Times · HT Insight · International Affairs</span>
+        <h3>EU–India trade deal: The path ahead</h3>
+        <p>What the next phase of EU–India trade negotiations must deliver — and the strategic stakes for both sides.</p>
+        <span class="read-link">Read on Hindustan Times →</span>
+      </a>
+
+      <a class="media-card" href="https://www.jansatta.com/opinion/a-new-beginning-for-partnership-india-europe-technology-council-and-the-opportunity-for-digital-sovereignty/4570527/" target="_blank" rel="noopener noreferrer" data-od-id="media-card-jansatta">
+        <span class="outlet">Jansatta · Opinion</span>
+        <h3>A new beginning for partnership: India–Europe Technology Council and digital sovereignty</h3>
+        <p>How the Technology Council opens space for digital sovereignty and a deeper tech partnership with Europe.</p>
+        <span class="read-link">Read on Jansatta →</span>
+      </a>
+
+      <a class="media-card" href="https://www.southasiamonitor.org/geopolitics-and-strategic-affairs/between-melody-moment-and-hard-work-ahead-modis-europe-tour" target="_blank" rel="noopener noreferrer" data-od-id="media-card-sam">
+        <span class="outlet">South Asia Monitor · Geopolitics &amp; Strategic Affairs</span>
+        <h3>Between melody, moment and hard work ahead: Modi’s Europe tour</h3>
+        <p>Reading the Europe visit beyond the optics — the diplomatic moment and the hard work that follows.</p>
+        <span class="read-link">Read on South Asia Monitor →</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer" data-od-id="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="y"></span> Sanket Kumar Prajapati</p>
+      <p>
+        <a href="mailto:sanketkumar1247@gmail.com">sanketkumar1247@gmail.com</a>
+        ·
+        <a href="research.html">Research</a>
+        ·
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.querySelector(".nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      });
+    })();
+  </script>
+</body>
+</html>

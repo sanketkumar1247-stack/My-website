@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Sanket Kumar Prajapati</title>
+  <meta name="description" content="Contact Sanket Kumar Prajapati for research collaboration, teaching, or academic enquiries.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-od-id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" data-od-id="logo">Sanket K. Prajapati</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-od-id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" data-od-id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" data-od-id="contact-main">
+    <p class="kicker" data-od-id="contact-kicker">Enquiries</p>
+    <h1 class="page-title" data-od-id="contact-title">Contact</h1>
+    <p class="page-lead" data-od-id="contact-lead">
+      For research collaboration, conference panels, peer review, or teaching enquiries — write directly or use the form. Based in New Delhi.
+    </p>
+
+    <div class="contact-grid" data-od-id="contact-grid">
+      <div>
+        <ul class="contact-list" data-od-id="contact-details">
+          <li>
+            <span class="label">Email (primary)</span>
+            <a href="mailto:sanketkumar1247@gmail.com">sanketkumar1247@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">Email (JNU)</span>
+            <a href="mailto:sanket70_isc@jnu.ac.in">sanket70_isc@jnu.ac.in</a>
+          </li>
+          
+          <li>
+            <span class="label">ORCID</span>
+            <a href="https://orcid.org/0009-0006-2524-7685" rel="noopener noreferrer" target="_blank">0009-0006-2524-7685</a>
+          </li>
+          <li>
+            <span class="label">Affiliation</span>
+            <span>Centre for European Studies, SIS, Jawaharlal Nehru University, New Delhi</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form" id="contact-form" data-od-id="contact-form" novalidate="">
+        <div class="form-fields">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required="" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required="" placeholder="you@institution.edu">
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required="" placeholder="Collaboration, panel, review…">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="" placeholder="A short note on context and timing."></textarea>
+          </div>
+          <button class="btn" type="submit" data-od-id="contact-submit">Send message</button>
+          <p class="form-note">Opens your email client with this message pre-filled. Nothing is stored on this site.</p>
+        </div>
+        <div class="form-success" role="status" data-od-id="contact-success">
+          Your email client should open shortly. If it does not, write to
+          <a href="mailto:sanketkumar1247@gmail.com">sanketkumar1247@gmail.com</a>.
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" data-od-id="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="y"></span> Sanket Kumar Prajapati</p>
+      <p>
+        <a href="mailto:sanketkumar1247@gmail.com">sanketkumar1247@gmail.com</a>
+        ·
+        <a href="about.html">About</a>
+        ·
+        <a href="research.html">Research</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.querySelector(".nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      });
+    })();
+    (function () {
+      var form = document.getElementById("contact-form");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var subject = form.subject.value.trim();
+        var message = form.message.value.trim();
+        if (!name || !email || !subject || !message) {
+          form.reportValidity();
+          return;
+        }
+        var body =
+          "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+        var href =
+          "mailto:sanketkumar1247@gmail.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+        window.location.href = href;
+        form.classList.add("is-sent");
+      });
+    })();
+  </script>
+
+
+</body></html>
